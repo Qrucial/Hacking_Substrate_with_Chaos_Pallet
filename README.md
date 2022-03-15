@@ -97,5 +97,15 @@ substrate-node-chaos/target/release/node-template # Start the Substrate Node
 We have added a pallet to our Substrate system which helps us to uncover different kind of vulnerabilities (eg. DoS, overflows, economic attacks, etc). Tests were limited to a single node and it clearly shows why a standalone system is weak and why high capacity nodes are required to secure a blockchain system.
 Also, we are sure if you have followed through this blog post, you also learned a lot. If you have questions you can ask them on a 1337 Matrix group (info below, you need to hack in) or send us a message on [QRUCIAL Twitter](https://twitter.com/qrucial_io).
 
-How to get into the matrix group: you need to know ALICE's secret seed and by that decrypt "".
+How to get into the matrix group: you need to know ALICE's secret seed and use it as a passphrase for that:
+
+```
+-----BEGIN PGP MESSAGE-----
+
+jA0ECQMC2AmpZeteyHT/0msBDZHMQ+hZWPLPicCmyF5O1zzbf8ancHlmGJAsEMv8
+nKWiSz6aDZkSMjjMFy13xrL66Z0Ycd0znre6yoBeffbB7AMb3Z460JhWrRrFefL2
+NKacdmy2HqlAbBct24WKKfhZ8x8vMTcqSdCBHA==
+=di7R
+-----END PGP MESSAGE-----
+```
 
