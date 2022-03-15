@@ -26,11 +26,11 @@ If you'd like to learn more about Threat Modeling, you can use [NIST resources](
 The 
 
 ## Testing with ChaosScope
-*"Chaoscope makes Substrate Runtimes behave in ways that they're not supposed to..."* - What does it mean? ChaosScope uses [subxt](https://github.com/paritytech/subxt) to inject requests. A more accurate explanation is that we are injecting [Extrinsics](https://polkadot.js.org/docs/substrate/extrinsics/) aka transactions. We are attacking the Substrate system from the Pallet Chaos pallet like we are coming from an external point of view (now we consider nodes also external to each other, as each of them are individual parts of the whole network).
+*"Chaoscope makes Substrate Runtimes behave in ways that they're not supposed to..."* - What does it mean? ChaosScope uses [subxt](https://github.com/paritytech/subxt) to inject requests. A more accurate explanation is that we are injecting [Extrinsics](https://polkadot.js.org/docs/substrate/extrinsics/) aka transactions. We are attacking the Substrate system from the Pallet Chaos pallet or through the PolkadotJS web interface, like we are coming from an external point of view (now we consider nodes also external to each other, as each of them are individual parts of the whole network).
 
-We are using a forked repository here as we are not aware what Linux system you are using. The original [ChaosScope repo](https://github.com/paritytech/chaoscope) does not include dependency check and might break the automated script, so [it was forked](https://github.com/smilingSix/chaoscope) and in this tutorial, we are using that fork. It should be working on [Kali](https://www.kali.org/), [Fedora](https://getfedora.org/), [Ubuntu](https://ubuntu.com/) and btw [Arch](https://archlinux.org/) systems.
+We are using a forked repository in this tutorial as we are not aware what Linux system you are using and what is installed. Reason is the original [ChaosScope repo](https://github.com/paritytech/chaoscope) does not include dependency checks and might mess up your Substrate setup. So the original repository [was forked](https://github.com/smilingSix/chaoscope) and in this tutorial, we are using that fork. You need all tools installed that are [needed to compilate Substrate](https://docs.substrate.io/tutorials/v3/create-your-first-substrate-chain/). CahosScope should be working on [Kali](https://www.kali.org/), [Fedora](https://getfedora.org/), [Ubuntu](https://ubuntu.com/) and btw [Arch](https://archlinux.org/) systems.
 
-The following commands are used from your choice of terminal to start the base Substrate system with Chaos Pallet included.
+The following commands are used from your choice of terminal to compile and start the base Substrate system with Chaos Pallet included.
 
 ```sh
 git clone https://github.com/smilingSix/chaoscope
@@ -82,6 +82,8 @@ substrate-node-chaos/target/release/node-template # Start the Substrate Node
 
 ```
 
+- You can also send Extrinsics manually through PolkadotJS app under Developer -> Extrinsics menu. We recommend you to check out all possibilities and explore the this tool as well. There are many ways to break a system.
+
 - Have fun hacking! 👾👾👾
 
 
@@ -93,5 +95,7 @@ substrate-node-chaos/target/release/node-template # Start the Substrate Node
 
 ## Conclusion
 We have added a pallet to our Substrate system which helps us to uncover different kind of vulnerabilities (eg. DoS, overflows, economic attacks, etc). Tests were limited to a single node and it clearly shows why a standalone system is weak and why high capacity nodes are required to secure a blockchain system.
-Also, we are sure if you have followed through this blog post, you also learned a lot. If you have feedback or questions, don't hesitate to send us a message on [QRUCIAL Twitter](https://twitter.com/qrucial_io).
+Also, we are sure if you have followed through this blog post, you also learned a lot. If you have questions you can ask them on a 1337 Matrix group (info below, you need to hack in) or send us a message on [QRUCIAL Twitter](https://twitter.com/qrucial_io).
+
+How to get into the matrix group: you need to know ALICE's secret seed and by that decrypt "".
 
